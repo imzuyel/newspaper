@@ -1,0 +1,5 @@
+@extends('inventory.master')
+@section('title') This is Inventory Management System @endsection
+@section('content')
+
+@endsection

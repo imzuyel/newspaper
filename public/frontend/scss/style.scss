@@ -1,0 +1,32 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Khobor - Modern Magazine & Newspaper HTML Template
+    Description: Khobor - Modern Magazine & Newspaper HTML Template
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+    
+    CSS INDEX
+    ===================
+	
+    1.    Theme Default CSS
+	2.    Header
+    3.    Post Common Style For Post Block, Carousel & Nav Etc
+	4.    Post Styles
+	5.    Single Post Details
+	6.    Blog & Blog Details
+	7.    Sidebar
+	8.    Contact
+	9.    Footer
+	
+-----------------------------------------------------------------------------------*/
+@import 'variabls';
+@import 'common';
+@import 'header';
+@import 'post-common-style';
+@import 'post';
+@import 'post-details';
+@import 'blog';
+@import 'sidebar';
+@import 'contact';
+@import 'footer';

@@ -1,0 +1,700 @@
+/*----------------------------------------*/
+/*  7.  Sidebar
+/*----------------------------------------*/
+
+/*-- Single Sidebar --*/
+.single-sidebar {
+    margin-bottom: 40px;
+    float: left;
+    width: 100%;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/*-- Sidebar Block Wrapper --*/
+.sidebar-block-wrapper {
+    border: 1px solid #f1f1f1;
+    float: left;
+    width: 100%;
+    
+    /*-- Head --*/
+    & .head {
+        float: left;
+        width: 100%;
+        padding: 15px 20px;
+        position: relative;
+        border-bottom: 1px solid #f1f1f1;
+        &::before, &::after {
+            position: absolute;
+            width: 4px;
+            height: 14px;
+            top: 50%;
+            margin-top: -7px;
+            background-color: $blue;
+            content: "";
+        }
+        &::before {
+            left: -1px;
+        }
+        &::after {
+            right: -1px;
+        }
+        
+        /*-- Title --*/
+        & .title {
+            margin: 0;
+            line-height: 24px;
+            font-weight: 600;
+            text-transform: capitalize;
+            color: $blue;
+            @media #{$large-mobile}{
+                font-size: 14px;
+            }
+        }
+        
+        // Head Style For Post Type ---------------
+        
+        /*-- Feature --*/
+        &.feature-head {
+            &::before, &::after {
+                background-color: $feature;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $feature;
+            }
+        }
+        
+        /*-- Gadgets --*/
+        &.gadgets-head {
+            &::before, &::after {
+                background-color: $blue;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $blue;
+            }
+        }
+        
+        /*-- Life Style --*/
+        &.life-style-head {
+            &::before, &::after {
+                background-color: $life-style;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $life-style;
+            }
+        }
+        
+        /*-- Travel --*/
+        &.travel-head {
+            &::before, &::after {
+                background-color: $travel;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $travel;
+            }
+        }
+
+        /*-- Fashion --*/
+        &.fashion-head {
+            &::before, &::after {
+                background-color: $fashion;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $fashion;
+            }
+        }
+
+        /*-- Sports --*/
+        &.sports-head {
+            &::before, &::after {
+                background-color: $sports;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $sports;
+            }
+        }
+
+        /*-- Politic --*/
+        &.politic-head {
+            &::before, &::after {
+                background-color: $politic;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $politic;
+            }
+        }
+
+        /*-- Education --*/
+        &.education-head {
+            &::before, &::after {
+                background-color: $education;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $education;
+            }
+        }
+
+        /*-- Health --*/
+        &.health-head {
+            &::before, &::after {
+                background-color: $health;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $health;
+            }
+        }
+
+        /*-- Madical --*/
+        &.madical-head {
+            &::before, &::after {
+                background-color: $madical;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $madical;
+            }
+        }
+
+        /*-- Video --*/
+        &.video-head {
+            &::before, &::after {
+                background-color: $video;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $video;
+            }
+        }
+
+        /*-- Businsee --*/
+        &.politic-head {
+            &::before, &::after {
+                background-color: $businsee;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $businsee;
+            }
+        }
+    }
+    
+    /*-- Body --*/
+    & .body {
+        padding: 20px;
+        float: left;
+        width: 100%;
+    }
+    
+}
+
+/*-- Sidebar Social Follow --*/
+.sidebar-social-follow {
+    margin-left: -1px;
+    margin-right: -1px;
+    & > div {
+        padding: 1px;
+        width: 50%;
+        float: left;
+        & a {
+            text-align: center;
+            border-radius: 3px;
+            display: block;
+            padding: 25px;
+            & i {
+                display: inline-block;
+                width: 47px;
+                height: 47px;
+                line-height: 47px;
+                border-radius: 50%;
+                background-color: $white;
+                box-shadow: 0 2px 2px rgba($black, 0.4);
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            & h3 {
+                font-size: 22px;
+                font-weight: 500;
+                color: $white;
+                margin-bottom: 4px;
+            }
+            & span {
+                display: block;
+                color: $white;
+                font-size: 15px;
+                letter-spacing: 1px;
+                text-transform: capitalize;
+                line-height: 16px;
+            }
+
+            &.facebook {
+                background-color: #516eab;
+                & i {
+                    color: #516eab;
+                }
+            }
+
+            &.google-plus {
+                background-color: #eb5e4c;
+                & i {
+                    color: #eb5e4c;
+                }
+            }
+
+            &.twitter {
+                background-color: #40bff5;
+                & i {
+                    color: #40bff5;
+                }
+            }
+
+            &.dribbble {
+                background-color: #f7659c;
+                & i {
+                    color: #f7659c;
+                }
+            }
+        }
+    }
+}
+
+/*-- Sidebar Banner --*/
+.sidebar-banner {
+    display: block;
+    overflow: hidden;
+    & img {
+        width: 100%;
+        transition: all 0.3s ease 0s;
+    }
+    &:hover {
+        & img {
+            transform: scale(1.1) rotate(-5deg);
+        }
+    }
+}
+
+/*-- Sidebar Tab List For Latest & Popular News --*/
+.sidebar-tab-list {
+    margin: -15px -20px;
+    z-index: 2;
+    position: relative;
+    & a {
+        width: 50%;
+        display: block;
+        float: left;
+        text-align: center;
+        position: relative;
+        line-height: 24px;
+        padding: 15px;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: $open-sans;
+        text-transform: capitalize;
+        color: $heading-color;
+        position: relative;
+        @media #{$desktop-device}{
+            font-size: 14px;
+        }
+        @media #{$small-mobile}{
+            font-size: 14px;
+        }
+        &::before, &::after {
+            position: absolute;
+            top: 50%;
+            height: 14px;
+            width: 4px;
+            background-color: $blue;
+            margin-top: -7px;
+            content: "";
+        }
+        &::before {
+            left: -1px;
+        }
+        &::after {
+            right: -1px;
+        }
+        
+        &:first-child {
+            &::after {
+                background-color: $white !important;
+                right: -3px;
+                width: 6px;
+            }
+        }
+        &:last-child {
+            &::before {
+                background-color: $white !important;
+                left: -3px;
+                width: 6px;
+            }
+        }
+
+        &.active {
+            background-color: $blue;
+            z-index: 2;
+            color: $white;
+            &::before, &::after {
+                background-color: $white !important;
+            }
+        }
+    }
+    
+    /*-- Active Color For Category --*/
+        
+    &.travel-sidebar-tab-list {
+        & a {
+            &::before, &::after {
+                background-color: $travel;
+            }
+            &.active {
+                background-color: $travel;
+            }
+        }
+    }
+    &.life-style-sidebar-tab-list {
+        & a {
+            &::before, &::after {
+                background-color: $life-style;
+            }
+            &.active {
+                background-color: $life-style;
+            }
+        }
+    }
+    &.fashion-sidebar-tab-list {
+        & a {
+            &::before, &::after {
+                background-color: $fashion;
+            }
+            &.active {
+                background-color: $fashion;
+            }
+        }
+    }
+    &.sports-sidebar-tab-list {
+        & a {
+            &::before, &::after {
+                background-color: $sports;
+            }
+            &.active {
+                background-color: $sports;
+            }
+        }
+    }
+    &.gadgets-sidebar-tab-list {
+        & a {
+            &::before, &::after {
+                background-color: $gadgets;
+            }
+            &.active {
+                background-color: $gadgets;
+            }
+        }
+    }
+    &.feature-sidebar-tab-list {
+        & a {
+            &::before, &::after {
+                background-color: $feature;
+            }
+            &.active {
+                background-color: $feature;
+            }
+        }
+    }
+    &.politic-sidebar-tab-list {
+        & a {
+            &::before, &::after {
+                background-color: $politic;
+            }
+            &.active {
+                background-color: $politic;
+            }
+        }
+    }
+    &.education-sidebar-tab-list {
+        & a {
+            &::before, &::after {
+                background-color: $education;
+            }
+            &.active {
+                background-color: $education;
+            }
+        }
+    }
+    &.health-sidebar-tab-list {
+        & a {
+            &::before, &::after {
+                background-color: $health;
+            }
+            &.active {
+                background-color: $health;
+            }
+        }
+    }
+    &.madical-sidebar-tab-list {
+        & a {
+            &::before, &::after {
+                background-color: $madical;
+            }
+            &.active {
+                background-color: $madical;
+            }
+        }
+    }
+    &.video-sidebar-tab-list {
+        & a {
+            &::before, &::after {
+                background-color: $video;
+            }
+            &.active {
+                background-color: $video;
+            }
+        }
+    }
+    &.businsee-sidebar-tab-list {
+        & a {
+            &::before, &::after {
+                background-color: $businsee;
+            }
+            &.active {
+                background-color: $businsee;
+            }
+        }
+    }
+    
+}
+
+/*-- Sidebar Category --*/
+.sidebar-category {
+    & li {
+        margin-bottom: 10px;
+        display: block;
+        & a {
+            display: block;
+            color: $body-color;
+            line-height: 24px;
+            font-size: 14px;
+            font-family: $open-sans;
+            
+            // Icon
+            &:before {
+                content: "\f0da";
+                font-family: 'Fontawesome';
+                font-size: 18px;
+                line-height: 24px;
+                float: left;
+                margin-right: 15px;
+                padding-left: 1px;
+            }
+            
+            // Default Hover
+            &:hover {
+                color: $blue;
+            }
+        }
+        
+        // Last Child
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    
+    /*-- Active Color For Category --*/
+        
+    &.travel-category {
+        & li {
+            & a {
+                &:hover {
+                    color: $travel;
+                }
+            }
+        }
+    }
+    &.life-style-category {
+        & li {
+            & a {
+                &:hover {
+                    color: $life-style;
+                }
+            }
+        }
+    }
+    &.fashion-category {
+        & li {
+            & a {
+                &:hover {
+                    color: $fashion;
+                }
+            }
+        }
+    }
+    &.sports-category {
+        & li {
+            & a {
+                &:hover {
+                    color: $sports;
+                }
+            }
+        }
+    }
+    &.gadgets-category {
+        & li {
+            & a {
+                &:hover {
+                    color: $gadgets;
+                }
+            }
+        }
+    }
+    &.feature-category {
+        & li {
+            & a {
+                &:hover {
+                    color: $feature;
+                }
+            }
+        }
+    }
+    &.politic-category {
+        & li {
+            & a {
+                &:hover {
+                    color: $politic;
+                }
+            }
+        }
+    }
+    &.education-category {
+        & li {
+            & a {
+                &:hover {
+                    color: $education;
+                }
+            }
+        }
+    }
+    &.health-category {
+        & li {
+            & a {
+                &:hover {
+                    color: $health;
+                }
+            }
+        }
+    }
+    &.madical-category {
+        & li {
+            & a {
+                &:hover {
+                    color: $madical;
+                }
+            }
+        }
+    }
+    &.video-category {
+        & li {
+            & a {
+                &:hover {
+                    color: $video;
+                }
+            }
+        }
+    }
+    &.businsee-category {
+        & li {
+            & a {
+                &:hover {
+                    color: $businsee;
+                }
+            }
+        }
+    }
+}
+
+/*-- Sidebar Subscribe --*/
+.sidebar-subscribe {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    background-color: $bg-light-gray;
+    padding: 47px 30px;
+    &::before {
+        content: url("img/shape/mail-1.png");
+        left: 0;
+        position: absolute;
+        top: 0;
+        z-index: -1
+    }
+    &::after {
+        bottom: 0;
+        content: url("img/shape/mail-2.png");
+        position: absolute;
+        right: 0;
+        z-index: -1;
+    }
+    & h4 {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 13px;
+        & span {
+            color: $red;
+        }
+    }
+    & p {}
+    
+    /*-- Sidebar Subscribe Form --*/
+    & .subscribe-form {
+        & input[type="email"] {
+            width: 265px;
+            height: 40px;
+            background-color: $white;
+            color: $heading-color;
+            line-height: 24px;
+            padding: 8px 20px;
+            font-size: 12px;
+            border: none;
+            clear: both;
+            margin: auto;
+            max-width: 100%;
+        }
+        & .button {
+            height: 40px;
+            background-color: $red;
+            color: $white;
+            line-height: 24px;
+            padding: 8px 40px;
+            border: none;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: $poppins;
+            clear: both;
+            margin: auto;
+            text-transform: uppercase;
+            margin-top: 15px;
+            &:hover {
+                background-color: darken($red, 10);
+            }
+        }
+    }
+}

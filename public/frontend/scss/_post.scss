@@ -1,0 +1,1004 @@
+/*----------------------------------------*/
+/*  4.  Post Styles
+/*----------------------------------------*/
+.post {
+    
+    /*-- Post Wrap --*/
+    & .post-wrap {
+        position: relative;
+        display: flex;
+        flex-flow: column;
+
+        /*-- Image --*/
+        & .image {
+            position: relative;
+            flex: 0 0 auto;
+            float: left;
+            margin-bottom: 17px;
+            & img {
+                width: 100%;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            
+            /*-- Video Popup Button --*/
+            & .video-btn {
+                width: 60px;
+                height: 60px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-top: -30px;
+                margin-left: -30px;
+                background-color: $white;
+                color: $blue;
+                text-align: center;
+                border-radius: 50%;
+                box-shadow: 0 3px 2px rgba($black, 0.2);
+                & i {
+                    display: block;
+                    line-height: 60px;
+                    font-size: 24px;
+                }
+                @media #{$desktop-device}{
+                    width: 40px;
+                    height: 40px;
+                    margin-top: -20px;
+                    margin-left: -20px;
+                    & i {
+                        line-height: 40px;
+                        font-size: 18px;
+                    }
+                }
+            }
+            
+        }
+
+        /*-- Category --*/
+        & .category {
+            z-index: 5;
+            font-size: 11px;
+            font-family: $open-sans;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            color: $white;
+            line-height: 24px;
+            padding: 0 9px;
+            display: block;
+            text-transform: uppercase;
+            background-color: $blue;
+
+            /*-- Category Background --*/
+            &.travel {
+                background-color: $travel;
+            }
+            &.life-style {
+                background-color: $life-style;
+            }
+            &.fashion {
+                background-color: $fashion;
+            }
+            &.sports {
+                background-color: $sports;
+            }
+            &.gadgets {
+                background-color: $gadgets;
+            }
+            &.feature {
+                background-color: $feature;
+            }
+            &.politic {
+                background-color: $politic;
+            }
+            &.education {
+                background-color: $education;
+            }
+            &.health {
+                background-color: $health;
+            }
+            &.madical {
+                background-color: $madical;
+            }
+            &.video {
+                background-color: $video;
+            }
+            &.businsee {
+                background-color: $businsee;
+            }
+        }
+
+        /*-- Content --*/
+        & .content {
+            z-index: 9;
+            overflow: hidden;
+            width: 100%;
+
+            /*-- Title --*/
+            & .title {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 24px;
+                margin-bottom: 0;
+                @media #{$desktop-device}{
+                    font-size: 16px;
+                }
+                @media #{$small-mobile}{
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+                & a {
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+            }
+
+            /*-- Meta Tags --*/
+            & .meta {
+                margin-top: 10px;
+
+                /*-- Meta List --*/
+                & .meta-item {
+                    margin-top: 5px;
+                    font-size: 13px;
+                    font-family: $open-sans;
+                    line-height: 16px;
+                    display: block;
+                    float: left;
+                    margin-right: 15px;
+                    @media #{$small-mobile}{
+                        font-size: 11px;
+                        margin-right: 10px;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    /*-- Icon --*/
+                    & i {
+                        display: block;
+                        float: left;
+                        margin-right: 6px;
+                        font-size: 13px;
+                        line-height: 16px;
+                        padding-left: 1px;
+                    }
+                }
+
+                /*-- Meta Hover --*/
+                & a:hover {
+                    color: $blue;
+                }
+
+            }
+
+            /*-- Description --*/
+            & p {
+                margin-bottom: 0;
+                margin-top: 10px;
+            }
+
+            /*-- Read More Button --*/
+            & .read-more {
+                margin-top: 16px;
+                text-transform: capitalize;
+                font-weight: 600;
+                color: $body-color;
+                text-decoration: underline;
+                font-size: 13px;
+            }
+
+        }
+    }
+    
+    /*-- List Style Post --*/
+    &.post-default-list {
+        & .post-wrap {
+            flex-flow: row;
+            @media #{$large-mobile}{
+                flex-grow: column;
+                flex-wrap: wrap;
+            }
+            & .image {
+                flex: 0 0 300px;
+                margin-right: 20px;
+                margin-bottom: 0;
+                @media #{$desktop-device}{
+                    width: 225px;
+                }
+                @media #{$large-mobile}{
+                    width: 100%;
+                    flex: 0 0 100%;
+                    margin-bottom: 17px;
+                }
+            }
+            & .content {
+                width: auto;
+                @media #{$large-mobile}{
+                    width: 100%;
+                    flex: 0 0 100%;
+                }
+                & .meta {
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+
+    /*-- Dark Post --*/
+    &.post-dark {
+        & .post-wrap {
+            & .content {
+                & .title {
+                    & a {
+                        color: $white;
+                        &:hover {
+                            color: $blue;
+                        }
+                    }
+                }
+                & .meta {
+                    & .meta-item {
+                        color: #cccccc;
+                        &:hover {
+                            color: $blue;
+                        }
+                    }
+                }
+                & p {
+                    color: #cccccc;
+                }
+                & .read-more {
+                    color: $blue;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        &.post-separator-border {
+            & .post-wrap {
+                border-color: #343434;
+            }
+        }
+    }
+    
+    /*-- Post Separator --*/
+    &.post-separator {
+        & .post-wrap {
+            margin-bottom: 20px;
+        }
+        &:last-child {
+            & .post-wrap {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+        }
+        &:nth-last-child(2) {
+            & .post-wrap {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: none;
+                
+                @media #{$large-mobile}{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    &.post-separator-border {
+        & .post-wrap {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        &:last-child {
+            & .post-wrap {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+        }
+    }
+    
+    /*-- Large Post --*/
+    &.post-large {
+        & .post-wrap {
+
+            // Title ----------
+            & .title {
+                font-size: 30px;
+                line-height: 36px;
+                @media #{$desktop-device}{
+                    font-size: 26px;
+                    line-height: 32px;
+                }
+                @media #{$large-mobile}{
+                    font-size: 24px;
+                    line-height: 30px;
+                }
+                @media #{$small-mobile}{
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+
+        }
+    }
+    
+    /*-- Small Post --*/
+    &.post-small {
+        & .post-wrap {
+
+            /*-- Image --*/
+            & .image {
+                margin-bottom: 10px;
+            }
+            
+            /*-- Content --*/
+            & .content {
+            
+                /*-- Title --*/
+                & .title {
+                    font-size: 14px;
+                    line-height: 22px;
+                    @media #{$desktop-device}{
+                        font-size: 12px;
+                        line-height: 18px;
+                    }
+                }
+                
+                /*-- Meta Tags --*/
+                & .meta {
+                    margin-top: 10px;
+                }
+
+            }
+        }
+        
+        /*-- List Style Post --*/
+        &.post-list {
+            & .post-wrap {
+                flex-flow: row;
+                
+                /*-- Image --*/
+                & .image {
+                    flex: 0 0 124px;
+                    margin-right: 20px;
+                    margin-bottom: 0;
+                    @media #{$desktop-device}{
+                        flex: 0 0 100px;
+                    }
+                    @media #{$small-mobile}{
+                        flex: 0 0 90px;
+                        margin-right: 15px;
+                    }
+                }
+                
+                /*-- Content --*/
+                & .content {
+                    width: auto;
+                    & .meta {
+                        margin-top: 6px;
+                    }
+                }
+            }
+            
+            // Popular Post --------------------
+            &.popular-post {
+                & .post-wrap {
+                    background-color: $bg-dark;
+                    padding: 20px;
+                    border: 1px solid #3d3d3d;
+                    display: flex;
+                    margin: 0;
+                    
+                    /*-- Image --*/
+                    & .image {
+                        border-radius: 5px;
+                        overflow: hidden;
+                    }
+                    
+                    /*-- Content --*/
+                    & .content {
+                        align-self: center;
+                        & .read-more {
+                            margin-top: 8px;
+                        }
+                    }
+                }
+            }
+            
+        }
+        
+    }
+    
+    /*-- Hero Post --*/
+    &.hero-post {
+        padding-bottom: 1px;
+        padding-top: 1px;
+        & .post-wrap {
+            padding: 0;
+            border: none;
+            margin: 0;
+        }
+    }
+    
+    /*-- Overlay Post --*/
+    &.post-overlay {
+        & .post-wrap {
+
+            /*-- Image --*/
+            & .image {
+                margin-bottom: 0;
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $black;
+                    content: "";
+                    z-index: 2;
+                    opacity: 0.3;
+                }
+            }
+            
+            /*-- Video Popup --*/
+            & .video-btn {
+                width: 50px;
+                height: 50px;
+                border: 1px solid $white;
+                color: $white;
+                border-radius: 50%;
+                background-color: rgba($black, 0.4);
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: -25px;
+                margin-top: -25px;
+                text-align: center;
+                z-index: 3;
+                &  i {
+                    line-height: 48px;
+                    font-size: 20px;
+                }
+            }
+
+            /*-- Category --*/
+            & .category {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            /*-- Content --*/
+            & .content {
+                position: absolute;
+                left: 20px;
+                bottom: 20px;
+                right: 20px;
+                width: auto;
+
+                /*-- Title --*/
+                & .title {
+                    & a {
+                        color: $white;
+                        &:hover {
+                            text-decoration: underline;
+                            color: $white;
+                        }
+                    }
+                }
+
+                /*-- Meta Tags --*/
+                & .meta {
+                    & .meta-item {
+                        color: $white;
+                    }
+                    & a {
+                        &:hover {
+                            text-decoration: underline;
+                            color: $white;
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+        /*-- Large Post --*/
+        &.post-large {
+            & .content {
+                bottom: 30px;
+                left: 30px;
+                right: 30px;
+                @media #{$small-mobile}{
+                    left: 20px;
+                    bottom: 20px;
+                    right: 20px;
+                }
+            }
+        }
+
+        /*-- Small Post --*/
+        &.post-small {
+            & .content {
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+            }
+        }
+        
+        /*-- Overlay Post Separator --*/
+        &.post-separator-border {
+            & .content {
+                bottom: 40px;
+            }
+            &:last-child {
+                & .content {
+                    bottom: 20px;
+                }
+            }
+            &.post-large {
+                & .content {
+                    bottom: 50px;
+                    @media #{$small-mobile}{
+                        bottom: 40px;
+                    }
+                }
+                &:last-child {
+                    & .content {
+                        bottom: 30px;
+                    }
+                }
+            }
+            &.post-small {
+                & .content {
+                    bottom: 30px;
+                    &:last-child {
+                        & .content {
+                            bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        /*-- Overlay Gradient --*/
+
+        /*-- One --*/
+        &.gradient-overlay-1 {
+            & .image {
+                &::before {
+                    background: rgba(133,188,66,0);
+                    background: linear-gradient(to bottom, rgba(133,188,66,0) 0%, rgba(133,188,66,0.3) 50%, rgba(0,0,0,0.6) 100%);
+                    opacity: 1;
+                }
+            }
+        }
+
+        /*-- Two --*/
+        &.gradient-overlay-2 {
+            & .image {
+                &::before {
+                    background: #00dbde;
+                    background: linear-gradient(to bottom, #00dbde 0%, #fc00ff 100%);
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        /*-- Three --*/
+        &.gradient-overlay-3 {
+            & .image {
+                &::before {
+                    background: #ff4e50;
+                    background: linear-gradient(to bottom, #ff4e50 0%, #f9d423 100%);
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        /*-- Four --*/
+        &.gradient-overlay-4 {
+            & .image {
+                &::before {
+                    background: #0abfbc;
+                    background: linear-gradient(to bottom, #0abfbc 0%, #fc354c 100%);
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        /*-- Five --*/
+        &.gradient-overlay-5 {
+            & .image {
+                &::before {
+                    background: #1d2671;
+                    background: linear-gradient(to bottom, #1d2671 0%, #c33764 100%);
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        /*-- Six --*/
+        &.gradient-overlay-6 {
+            & .image {
+                &::before {
+                    background: #a43931;
+                    background: linear-gradient(to bottom, #a43931 0%, #67bf35 100%);
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+    
+    
+    /*-- Hover Color For Post Category --*/
+    
+    /*-- Travel --*/
+    &.travel-post {
+        & .image {
+            & .video-popup {
+                color: $travel;
+            }
+        }
+        & .content {
+            & .title {
+                & a {
+                    &:hover {
+                        color: $travel;
+                    }
+                }
+            }
+            & .meta {
+                & a {
+                    &:hover {
+                        color: $travel;
+                    }
+                }
+            }
+            & .read-more {
+                &:hover {
+                    color: $travel;
+                }
+            }
+        }
+    }
+    
+    /*-- Life Style --*/
+    &.life-style-post {
+        & .image {
+            & .video-popup {
+                color: $life-style;
+            }
+        }
+        & .content {
+            & .title {
+                & a {
+                    &:hover {
+                        color: $life-style;
+                    }
+                }
+            }
+            & .meta {
+                & a {
+                    &:hover {
+                        color: $life-style;
+                    }
+                }
+            }
+            & .read-more {
+                &:hover {
+                    color: $life-style;
+                }
+            }
+        }
+    }
+    
+    /*-- Fashion --*/
+    &.fashion-post {
+        & .image {
+            & .video-popup {
+                color: $fashion;
+            }
+        }
+        & .content {
+            & .title {
+                & a {
+                    &:hover {
+                        color: $fashion;
+                    }
+                }
+            }
+            & .meta {
+                & a {
+                    &:hover {
+                        color: $fashion;
+                    }
+                }
+            }
+            & .read-more {
+                &:hover {
+                    color: $fashion;
+                }
+            }
+        }
+    }
+    
+    /*-- Sports --*/
+    &.sports-post {
+        & .image {
+            & .video-popup {
+                color: $sports;
+            }
+        }
+        & .content {
+            & .title {
+                & a {
+                    &:hover {
+                        color: $sports;
+                    }
+                }
+            }
+            & .meta {
+                & a {
+                    &:hover {
+                        color: $sports;
+                    }
+                }
+            }
+            & .read-more {
+                &:hover {
+                    color: $sports;
+                }
+            }
+        }
+    }
+    
+    /*-- Gadgets --*/
+    &.gadgets-post {
+        & .image {
+            & .video-popup {
+                color: $gadgets;
+            }
+        }
+        & .content {
+            & .title {
+                & a {
+                    &:hover {
+                        color: $gadgets;
+                    }
+                }
+            }
+            & .meta {
+                & a {
+                    &:hover {
+                        color: $gadgets;
+                    }
+                }
+            }
+            & .read-more {
+                &:hover {
+                    color: $gadgets;
+                }
+            }
+        }
+    }
+    
+    /*-- Feature --*/
+    &.feature-post {
+        & .image {
+            & .video-popup {
+                color: $feature;
+            }
+        }
+        & .content {
+            & .title {
+                & a {
+                    &:hover {
+                        color: $feature;
+                    }
+                }
+            }
+            & .meta {
+                & a {
+                    &:hover {
+                        color: $feature;
+                    }
+                }
+            }
+            & .read-more {
+                &:hover {
+                    color: $feature;
+                }
+            }
+        }
+    }
+    
+    /*-- Politic --*/
+    &.politic-post {
+        & .image {
+            & .video-popup {
+                color: $politic;
+            }
+        }
+        & .content {
+            & .title {
+                & a {
+                    &:hover {
+                        color: $politic;
+                    }
+                }
+            }
+            & .meta {
+                & a {
+                    &:hover {
+                        color: $politic;
+                    }
+                }
+            }
+            & .read-more {
+                &:hover {
+                    color: $politic;
+                }
+            }
+        }
+    }
+    
+    /*-- Education --*/
+    &.education-post {
+        & .image {
+            & .video-popup {
+                color: $education;
+            }
+        }
+        & .content {
+            & .title {
+                & a {
+                    &:hover {
+                        color: $education;
+                    }
+                }
+            }
+            & .meta {
+                & a {
+                    &:hover {
+                        color: $education;
+                    }
+                }
+            }
+            & .read-more {
+                &:hover {
+                    color: $education;
+                }
+            }
+        }
+    }
+    
+    /*-- Health --*/
+    &.health-post {
+        & .image {
+            & .video-popup {
+                color: $health;
+            }
+        }
+        & .content {
+            & .title {
+                & a {
+                    &:hover {
+                        color: $health;
+                    }
+                }
+            }
+            & .meta {
+                & a {
+                    &:hover {
+                        color: $health;
+                    }
+                }
+            }
+            & .read-more {
+                &:hover {
+                    color: $health;
+                }
+            }
+        }
+    }
+    
+    /*-- Madical --*/
+    &.madical-post {
+        & .image {
+            & .video-popup {
+                color: $madical;
+            }
+        }
+        & .content {
+            & .title {
+                & a {
+                    &:hover {
+                        color: $madical;
+                    }
+                }
+            }
+            & .meta {
+                & a {
+                    &:hover {
+                        color: $madical;
+                    }
+                }
+            }
+            & .read-more {
+                &:hover {
+                    color: $madical;
+                }
+            }
+        }
+    }
+    
+    /*-- Video --*/
+    &.video-post {
+        & .image {
+            & .video-popup {
+                color: $video;
+            }
+        }
+        & .content {
+            & .title {
+                & a {
+                    &:hover {
+                        color: $video;
+                    }
+                }
+            }
+            & .meta {
+                & a {
+                    &:hover {
+                        color: $video;
+                    }
+                }
+            }
+            & .read-more {
+                &:hover {
+                    color: $video;
+                }
+            }
+        }
+    }
+    
+    /*-- Businsee --*/
+    &.businsee-post {
+        & .image {
+            & .video-popup {
+                color: $businsee;
+            }
+        }
+        & .content {
+            & .title {
+                & a {
+                    &:hover {
+                        color: $businsee;
+                    }
+                }
+            }
+            & .meta {
+                & a {
+                    &:hover {
+                        color: $businsee;
+                    }
+                }
+            }
+            & .read-more {
+                &:hover {
+                    color: $businsee;
+                }
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,778 @@
+/*----------------------------------------*/
+/*  3.  Post Common Style For Post Block, Carousel & Nav Etc
+/*----------------------------------------*/
+
+/*-- Popular Section --*/
+.popular-section {
+    background-color: #effcff;
+}
+
+/*-- Popular Post Slider --*/
+.popular-post-slider {
+    & .post-overlay {
+        & .post-wrap {
+            border: 1px solid transparent;
+        }
+    }
+}
+
+/*-- Post Block Wrapper --*/
+.post-block-wrapper {
+    border: 1px solid #f1f1f1;
+    float: left;
+    width: 100%;
+    &.dark {
+        border-color: #343434;
+        & .head {
+            border-color: #343434;
+        }
+    }
+    
+    /*-- Post Block Head --*/
+    & .head {
+        float: left;
+        width: 100%;
+        padding: 15px 20px;
+        position: relative;
+        border-bottom: 1px solid #f1f1f1;
+        border-top: 1px solid #f1f1f1;
+        &:first-child {
+            border-top: 0px solid transparent;
+        }
+        &::before, &::after {
+            position: absolute;
+            width: 4px;
+            height: 14px;
+            top: 50%;
+            margin-top: -7px;
+            background-color: $blue;
+            content: "";
+        }
+        &::before {
+            left: -1px;
+        }
+        &::after {
+            right: -1px;
+        }
+        
+        /*-- Title --*/
+        & .title {
+            float: left;
+            margin: 0;
+            line-height: 24px;
+            font-weight: 600;
+            text-transform: capitalize;
+            color: $blue;
+            @media #{$large-mobile}{
+                font-size: 14px;
+            }
+        }
+        
+        /*-- Feature Post Head --*/
+        &.feature-head {
+            &::before, &::after {
+                background-color: $feature;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $feature;
+            }
+        }
+        
+        /*-- Life Style Post Head --*/
+        &.life-style-head {
+            &::before, &::after {
+                background-color: $life-style;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $life-style;
+            }
+        }
+        
+        /*-- Travel Post Head --*/
+        &.travel-head {
+            &::before, &::after {
+                background-color: $travel;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $travel;
+            }
+        }
+        
+        /*-- Fashion Post Head --*/
+        &.fashion-head {
+            &::before, &::after {
+                background-color: $fashion;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $fashion;
+            }
+        }
+        
+        /*-- Sports Post Head --*/
+        &.sports-head {
+            &::before, &::after {
+                background-color: $sports;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $sports;
+            }
+        }
+        
+        /*-- Gadgets Post Head --*/
+        &.gadgets-head {
+            &::before, &::after {
+                background-color: $gadgets;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $gadgets;
+            }
+        }
+        
+        /*-- Politic Post Head --*/
+        &.politic-head {
+            &::before, &::after {
+                background-color: $politic;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $politic;
+            }
+        }
+        
+        /*-- Education Post Head --*/
+        &.education-head {
+            &::before, &::after {
+                background-color: $education;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $education;
+            }
+        }
+        
+        /*-- Health Post Head --*/
+        &.health-head {
+            &::before, &::after {
+                background-color: $health;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $health;
+            }
+        }
+        
+        /*-- Madical Post Head --*/
+        &.madical-head {
+            &::before, &::after {
+                background-color: $madical;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $madical;
+            }
+        }
+        
+        /*-- Video Post Head --*/
+        &.video-head {
+            &::before, &::after {
+                background-color: $video;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $video;
+            }
+        }
+        
+        /*-- Businsee Post Head --*/
+        &.businsee-head {
+            &::before, &::after {
+                background-color: $businsee;
+            }
+        
+            /*-- Title --*/
+            & .title {
+                color: $businsee;
+            }
+        }
+        
+        /*-- Post Block Tab List --*/
+        & .post-block-tab-list {
+            float: right;
+            & > li {
+                margin-right: 30px;
+                position: relative;
+                float: left;
+                &:last-child {
+                    margin-right: 0;
+                }
+                & > a {
+                    font-size: 13px;
+                    font-family: $open-sans;
+                    line-height: 24px;
+                    text-transform: capitalize;
+                    color: $heading-color;
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+                & .dropdown-menu {
+                    left: auto !important;
+                    right: 0px !important;
+                    top: 100% !important;
+                    transform: translate(0px) !important;
+                    margin-top: 15px;
+                    border-radius: 0px;
+                    text-align: right;
+                    padding: 10px 20px;
+                    border: 1px solid #f1f1f1;
+                    & li {
+                        & a {
+                            font-size: 13px;
+                            font-family: $open-sans;
+                            line-height: 24px;
+                            text-transform: capitalize;
+                            color: $heading-color;
+                            &:hover, &.active {
+                                color: $blue;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            /*-- Feature Post Tab List --*/
+            &.feature-post-tab-list {
+                & > li {
+                    & > a {
+                        &:hover, &.active {
+                            color: $feature;
+                        }
+                    }
+                    & .dropdown-menu {
+                        & li {
+                            & a {
+                                &:hover, &.active {
+                                    color: $feature;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            /*-- Life Style Post Tab List --*/
+            &.life-style-post-tab-list {
+                & > li {
+                    & > a {
+                        &:hover, &.active {
+                            color: $life-style;
+                        }
+                    }
+                    & .dropdown-menu {
+                        & li {
+                            & a {
+                                &:hover, &.active {
+                                    color: $life-style;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            /*-- Travel Post Tab List --*/
+            &.travel-post-tab-list {
+                & > li {
+                    & > a {
+                        &:hover, &.active {
+                            color: $travel;
+                        }
+                    }
+                    & .dropdown-menu {
+                        & li {
+                            & a {
+                                &:hover, &.active {
+                                    color: $travel;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            /*-- Fashion Post Tab List --*/
+            &.fashion-post-tab-list {
+                & > li {
+                    & > a {
+                        &:hover, &.active {
+                            color: $fashion;
+                        }
+                    }
+                    & .dropdown-menu {
+                        & li {
+                            & a {
+                                &:hover, &.active {
+                                    color: $fashion;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            /*-- Sports Post Tab List --*/
+            &.sports-post-tab-list {
+                & > li {
+                    & > a {
+                        &:hover, &.active {
+                            color: $sports;
+                        }
+                    }
+                    & .dropdown-menu {
+                        & li {
+                            & a {
+                                &:hover, &.active {
+                                    color: $sports;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            /*-- Gadgets Post Tab List --*/
+            &.gadgets-post-tab-list {
+                & > li {
+                    & > a {
+                        &:hover, &.active {
+                            color: $blue;
+                        }
+                    }
+                    & .dropdown-menu {
+                        & li {
+                            & a {
+                                &:hover, &.active {
+                                    color: $blue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            /*-- Politic Post Tab List --*/
+            &.politic-post-tab-list {
+                & > li {
+                    & > a {
+                        &:hover, &.active {
+                            color: $politic;
+                        }
+                    }
+                    & .dropdown-menu {
+                        & li {
+                            & a {
+                                &:hover, &.active {
+                                    color: $politic;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            /*-- Education Post Tab List --*/
+            &.education-post-tab-list {
+                & > li {
+                    & > a {
+                        &:hover, &.active {
+                            color: $education;
+                        }
+                    }
+                    & .dropdown-menu {
+                        & li {
+                            & a {
+                                &:hover, &.active {
+                                    color: $education;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            /*-- Health Post Tab List --*/
+            &.health-post-tab-list {
+                & > li {
+                    & > a {
+                        &:hover, &.active {
+                            color: $health;
+                        }
+                    }
+                    & .dropdown-menu {
+                        & li {
+                            & a {
+                                &:hover, &.active {
+                                    color: $health;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            /*-- Madical Post Tab List --*/
+            &.madical-post-tab-list {
+                & > li {
+                    & > a {
+                        &:hover, &.active {
+                            color: $madical;
+                        }
+                    }
+                    & .dropdown-menu {
+                        & li {
+                            & a {
+                                &:hover, &.active {
+                                    color: $madical;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            /*-- Video Post Tab List --*/
+            &.video-post-tab-list {
+                & > li {
+                    & > a {
+                        &:hover, &.active {
+                            color: $video;
+                        }
+                    }
+                    & .dropdown-menu {
+                        & li {
+                            & a {
+                                &:hover, &.active {
+                                    color: $video;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            /*-- Businsee Post Tab List --*/
+            &.businsee-post-tab-list {
+                & > li {
+                    & > a {
+                        &:hover, &.active {
+                            color: $businsee;
+                        }
+                    }
+                    & .dropdown-menu {
+                        & li {
+                            & a {
+                                &:hover, &.active {
+                                    color: $businsee;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    /*-- Post Block Body --*/
+    & .body {
+        padding: 20px;
+        float: left;
+        width: 100%;
+    }
+    
+}
+
+/*-- Post Block Carousel --*/
+.post-block-carousel {
+    & .slick-arrow {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        border: 1px solid #f1f1f1;
+        text-align: center;
+        border-radius: 2px;
+        padding: 0;
+        background-color: transparent;
+        top: -62px;
+        &.slick-prev {
+            right: 38px;
+        }
+        &.slick-next {
+            right: 0;
+        }
+        & i {
+            font-size: 20px;
+            display: block;
+            line-height: 26px;
+            margin-top: -1px;
+        }
+        &:hover {
+            color: $blue;
+            border-color: $blue;
+        }
+    }
+    
+    /*-- Post Block Carousel Dark --*/
+    &.dark {
+        & .slick-arrow {
+            border-color: #343434;
+            color: $white;
+        }
+    }
+    
+    /*-- Life Style --*/
+    &.life-style-post-carousel {
+        & .slick-arrow {
+            &:hover {
+                color: $life-style;
+                border-color: $life-style;
+            }
+        }
+    }
+    
+    /*-- Travel --*/
+    &.travel-post-carousel {
+        & .slick-arrow {
+            &:hover {
+                color: $travel;
+                border-color: $travel;
+            }
+        }
+    }
+    
+    /*-- Fashion --*/
+    &.fashion-post-carousel {
+        & .slick-arrow {
+            &:hover {
+                color: $fashion;
+                border-color: $fashion;
+            }
+        }
+    }
+    
+    /*-- Sports --*/
+    &.sports-post-carousel {
+        & .slick-arrow {
+            &:hover {
+                color: $sports;
+                border-color: $sports;
+            }
+        }
+    }
+    
+    /*-- Gadgets --*/
+    &.gadgets-post-carousel {
+        & .slick-arrow {
+            &:hover {
+                color: $gadgets;
+                border-color: $gadgets;
+            }
+        }
+    }
+    
+    /*-- Feature --*/
+    &.feature-post-carousel {
+        & .slick-arrow {
+            &:hover {
+                color: $feature;
+                border-color: $feature;
+            }
+        }
+    }
+    
+    /*-- Politic --*/
+    &.politic-post-carousel {
+        & .slick-arrow {
+            &:hover {
+                color: $politic;
+                border-color: $politic;
+            }
+        }
+    }
+    
+    /*-- Education --*/
+    &.education-post-carousel {
+        & .slick-arrow {
+            &:hover {
+                color: $education;
+                border-color: $education;
+            }
+        }
+    }
+    
+    /*-- Health --*/
+    &.health-post-carousel {
+        & .slick-arrow {
+            &:hover {
+                color: $health;
+                border-color: $health;
+            }
+        }
+    }
+    
+    /*-- Madical --*/
+    &.madical-post-carousel {
+        & .slick-arrow {
+            &:hover {
+                color: $madical;
+                border-color: $madical;
+            }
+        }
+    }
+    
+    /*-- Video --*/
+    &.video-post-carousel {
+        & .slick-arrow {
+            &:hover {
+                color: $video;
+                border-color: $video;
+            }
+        }
+    }
+    
+    /*-- Businsee --*/
+    &.businsee-post-carousel {
+        & .slick-arrow {
+            &:hover {
+                color: $businsee;
+                border-color: $businsee;
+            }
+        }
+    }
+    
+}
+
+/*-- Row Post Carousel --*/
+.row-post-carousel {
+    & .slick-slide {
+        & > div {
+            
+            & .post {
+                display: block !important;
+                & .post-wrap {
+                    display: block;
+                    float: left;
+                    border-bottom: 1px solid #f1f1f1;
+                    padding-bottom: 20px;
+                    margin-bottom: 20px;
+                    width: 100%;
+                }
+                &.post-overlay {
+                    border-bottom: 1px solid #f1f1f1;
+                    padding-bottom: 20px;
+                    margin-bottom: 20px;
+                    float: left;
+                    width: 100%;
+                    & .post-wrap {
+                        border-bottom: 0px solid transparent;
+                        padding-bottom: 0;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            &:last-child {
+                & .post {
+                    & .post-wrap {
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                        border-bottom: 0;
+                    }
+                    &.post-overlay {
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                        border-bottom: 0;
+                        & .post-wrap {
+                            border-bottom: 0px solid transparent;
+                            padding-bottom: 0;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-- Column Post Carousel --*/
+.column-post-carousel {
+    & .slick-arrow {
+        &.slick-prev {
+            right: 53px;
+        }
+        &.slick-next {
+            right: 15px;
+        }
+    }
+}
+
+/*-- Post Middle Banner --*/
+.post-middle-banner {
+    display: block;
+    overflow: hidden;
+    & img {
+        width: 100%;
+        transition: all 0.3s ease 0s;
+    }
+    &:hover {
+        & img {
+            transform: scale(1.1) rotate(-1deg);
+        }
+    }
+}
+
+/*-- Post Carousel One --*/
+.post-carousel-1 {
+    & .slick-arrow {
+        width: 35px;
+        text-align: center;
+        height: 42px;
+        background-color: $white;
+        position: absolute;
+        top: 50%;
+        border: none;
+        margin-top: -21px;
+        z-index: 9;
+        & i {
+            display: block;
+            font-size: 28px;
+            line-height: 42px;
+        }
+        &.slick-prev {
+            left: 0;
+            border-radius: 0 2px 2px 0;
+        }
+        &.slick-next {
+            right: 0;
+            border-radius: 2px 0 0 2px;
+        }
+        &:hover {
+            color: $red;
+        }
+    }
+}

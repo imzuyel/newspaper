@@ -1,0 +1,402 @@
+/*----------------------------------------*/
+/*  5.  Single Post Details
+/*----------------------------------------*/
+
+/*-- Post Header --*/
+.post-header {
+    padding: 50px 30px;
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    @media #{$large-mobile}{
+        padding-bottom: 40px;
+    }
+        
+    /*-- Meta --*/
+    & .meta {
+        display: block;
+        margin-bottom: 8px;
+
+        /*-- Meta Item --*/
+        & .meta-item {
+            display: block;
+            float: left;
+            font-size: 13px;
+            color: $white;
+            letter-spacing: 0.75px;
+            line-height: 30px;
+            font-family: $open-sans;
+            margin-left: 20px;
+            @media #{$large-mobile}{
+                margin-left: 0;
+                margin-right: 20px;
+                margin-bottom: 10px;
+                float: left;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+            & i {
+                font-size: 16px;
+                color: $blue;
+                margin-right: 10px;
+                line-height: 30px;
+            }
+            & img {
+                width: 30px;
+                height: 30px;
+                border: 1px solid #e4e4e4;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+
+            /*-- Category --*/
+            &.category {
+                font-size: 12px;
+                text-transform: uppercase;
+                font-weight: 600;
+                color: $white;
+                letter-spacing: 1px;
+                background-color: $blue;
+                border-radius: 5px;
+                padding: 0 13px;
+                height: 30px;
+                line-height: 31px;
+                margin-left: 0;
+
+                /*-- Category Color --*/
+                &.travel {
+                    background-color: $travel;
+                }
+                &.life-style {
+                    background-color: $life-style;
+                }
+                &.fashion {
+                    background-color: $fashion;
+                }
+                &.sports {
+                    background-color: $sports;
+                }
+                &.gadgets {
+                    background-color: $gadgets;
+                }
+                &.feature {
+                    background-color: $feature;
+                }
+                &.politic {
+                    background-color: $politic;
+                }
+                &.education {
+                    background-color: $education;
+                }
+                &.health {
+                    background-color: $health;
+                }
+                &.madical {
+                    background-color: $madical;
+                }
+                &.video {
+                    background-color: $video;
+                }
+                &.businsee {
+                    background-color: $businsee;
+                }
+            }
+            &.author {}
+            &.date {}
+            &.view {
+                float: right;
+                @media #{$large-mobile}{
+                    float: left;
+                }
+            }
+            &.comments {
+                float: right;
+                @media #{$large-mobile}{
+                    float: left;
+                }
+            }
+        }
+        & a {
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+
+    /*-- Title --*/
+    & .title {
+        color: $white;
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 40px;
+        margin-bottom: 16px;
+        @media #{$large-mobile}{
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+}
+
+/*-- Single Post --*/
+.single-post {
+    & .post-wrap {
+        
+        /*-- Content --*/
+        & .content {
+            & p {
+                margin-bottom: 30px;
+                display: block;
+                float: left;
+                & span {
+                    line-height: 32px;
+                    color: #444444;
+                    margin-bottom: 20px;
+                }
+                & img {
+                    @media #{$large-mobile}{
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            & span.italic {
+                line-height: 32px;
+                color: #444444;
+                margin-bottom: 20px;
+            }
+            & ol {
+	            list-style: decimal inside;
+                & li {}
+            }
+            & .dropcap {
+                display: block;
+                &::first-letter {
+                    font-size: 100px;
+                    float: left;
+                    display: block;
+                    font-weight: 800;
+                    color: $heading-color;
+                    padding: 8px 10px 5px 0;
+                    line-height: 1;
+                    @media #{$large-mobile}{
+                        font-size: 70px;
+                    }
+                }
+            }
+            & > img {
+                margin-bottom: 30px;
+                max-width: 100%;
+            }
+            
+            /*-- Blockquote --*/
+            & .blockquote {
+                margin-bottom: 30px;
+                @media #{$large-mobile}{
+                    padding: 40px 30px;
+                }
+                & p {
+                    margin: 0;
+                }
+            }
+        }
+        
+        /*-- Tags & Social --*/
+        & .tags-social {
+            width: 100%;
+            padding-top: 20px;
+            border-top: 1px solid #f1f1f1;
+            margin-top: 20px;
+            
+            /*-- Tags --*/
+            & .tags {
+                & i {
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 3px;
+                    text-align: center;
+                    color: $white;
+                    background-color: $blue;
+                    line-height: 36px;
+                    float: left;
+                    margin-right: 20px;
+                }
+                & a {
+                    line-height: 24px;
+                    margin: 6px 0;
+                }
+            }
+            
+            /*-- Post Social --*/
+            & .post-social {
+                @media #{$large-mobile}{
+                    width: 100%;
+                    margin-top: 15px;
+                }
+                & a {
+                    background-color: $blue;
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 3px;
+                    text-align: center;
+                    color: $white;
+                    text-shadow: 0 2px 2px rgba($black, 0.4);
+                    & i {
+                        font-size: 16px;
+                        line-height: 38px;
+                    }
+
+                    &.facebook {
+                        background-color: #516eab;
+                    }
+                    &.twitter {
+                        background-color: #40bff5;
+                    }
+                    &.dribbble {
+                        background-color: #f7659c;
+                    }
+                    &.google-plus {
+                        background-color: #eb5e4c;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+/*-- Preview & Next Post Links --*/
+.post-nav {
+    border: 1px solid #f1f1f1;
+    float: left;
+    width: 100%;
+    & a {
+        display: block;
+        float: left;
+        width: 50%;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: $poppins;
+        color: $heading-color;
+        @media #{$large-mobile}{
+            width: 100%;
+        }
+        & span {
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: capitalize;
+            color: $body-color;
+            margin-bottom: 5px;
+        }
+        &.prev-post {
+            border-right: 1px solid #f1f1f1;
+            text-align: left;
+            @media #{$large-mobile}{
+                border-bottom: 1px solid #f1f1f1;
+                border-right: 0px solid #f1f1f1;
+            }
+        }
+        &.next-post {
+            text-align: right;
+        }
+        &:hover {
+            color: $blue;
+        }
+    }
+}
+
+/*-- Post Author --*/
+.post-author {
+    border: 1px solid #f1f1f1;
+    float: left;
+    width: 100%;
+    padding: 20px;
+    & .image {
+        width: 90px;
+        border: 1px solid #f1f1f1;
+        margin-right: 20px;
+        border-radius: 5px;
+        @media #{$large-mobile}{
+            float: none !important;
+            margin-bottom: 20px;
+        }
+        & img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+    & .content {
+        & h5 {
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+            & a {
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+        & p {
+            margin-bottom: 8px;
+        }
+        & .social {
+            & a {
+                color: $heading-color;
+                margin-right: 10px;
+                &:hover {
+                    color: $blue;
+                }
+                & i {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+/*-- Post Comment Form --*/
+.post-comment-form {
+    & label {
+        display: block;
+        line-height: 18px;
+        & sup {
+            color: $blue;
+        }
+    }
+    & input {
+        width: 100%;
+        height: 40px;
+        border: 1px solid #f1f1f1;
+        line-height: 24px;
+        padding: 7px 15px;
+        &[type="submit"] {
+            width: auto;
+            border-radius: 5px;
+            background-color: $blue;
+            color: $white;
+            text-transform: capitalize;
+            border: none;
+            padding: 8px 30px;
+            &:focus {
+                border: none;
+            }
+        }
+        &:focus {
+            border-color: $blue;
+        }
+    }
+    & textarea {
+        width: 100%;
+        height: 100px;
+        resize: none;
+        border: 1px solid #f1f1f1;
+        line-height: 24px;
+        padding: 7px 15px;
+        &:focus {
+            border-color: $blue;
+        }
+    }
+}

@@ -1,0 +1,676 @@
+/*----------------------------------------*/
+/*  1.  Theme default CSS
+/*----------------------------------------*/
+
+/*-- Google Font --*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Poppins:300,400,500,600,700,800');
+
+/*-- Common Style --*/
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body{
+    background-color: $white;
+    line-height: 24px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    visibility: visible;
+    font-family: $open-sans;
+    color: $body-color;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: $heading-color;
+    font-family: $poppins;
+    font-weight: 400;
+    margin-top: 0;
+}
+h1,.h1 {
+    font-size: 36px;
+    line-height: 42px;
+}
+h2,.h2 {
+    font-size: 30px;
+    line-height: 36px;
+}
+h3,.h3 {
+    font-size: 24px;
+    line-height: 30px;
+}
+h4,.h4 {
+    font-size: 18px;
+    line-height: 24px;
+}
+h5,.h5 {
+    font-size: 14px;
+    line-height: 22px;
+}
+h6,.h6 {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+a, button {
+    color: inherit;
+    display: inline-block;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+a, i, button, img, input, span,
+*:before, *:after {
+    transition: all 0.3s ease 0s;
+}
+*:focus {
+    outline: none !important;
+}
+a:focus {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+    color: $blue;
+}
+button, input[type="submit"] {
+    cursor: pointer;
+}
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+/*-- 
+    Common CSS
+-----------------------------------------*/
+.fix {
+    overflow:hidden
+}
+.clear{
+    clear: both;
+}
+.section {
+    float: left;
+    width: 100%;
+}
+
+/*-- 
+    Background color
+-----------------------------------------*/
+.bg-white {
+    background-color: $white;
+}
+.bg-black {
+    background-color: $black;
+}
+.bg-light-gray {
+    background-color: $bg-light-gray;
+}
+.bg-dark {
+    background-color: $bg-dark !important;
+}
+.bg-dark-gray {
+    background-color: $bg-dark-gray;
+}
+.bg-blue {
+    background-color: $blue;
+}
+.bg-yellow {
+    background-color: $yellow;
+}
+
+/*-- Container Width For Mobile Device --*/
+@media #{$large-mobile}{
+    .container {
+        width: 450px;
+    }
+}
+@media #{$small-mobile}{
+    .container {
+        width: 100%;
+    }
+}
+
+/*-- 
+    Margin & Padding
+-----------------------------------------*/
+/*-- Margin Top --*/
+@for $i from 1 through 40 {
+    .mt-#{5 * $i}{margin-top: 5px * $i;}
+}
+
+/*-- Margin Bottom --*/
+@for $i from 1 through 40 {
+    .mb-#{5 * $i}{margin-bottom: 5px *$i;}
+}
+
+/*-- Padding Top --*/
+@for $i from 1 through 40 {
+    .pt-#{5 * $i}{padding-top: 5px *$i;}
+}
+
+/*-- Padding Bottom --*/
+@for $i from 1 through 40 {
+    .pb-#{5 * $i}{padding-bottom: 5px *$i;}
+}
+
+/*-- 
+    Custom Row
+-----------------------------------------*/
+.row-1 {
+    margin-left: -1px;
+    margin-right: -1px;
+    & > [class*="col"] {
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+}
+
+/*-- 
+    Input Placeholder
+-----------------------------------------*/
+input:-moz-placeholder, textarea:-moz-placeholder {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+/*-- 
+    Overlay CSS
+-----------------------------------------*/
+[class*="overlay-opacity"] {
+    position: relative;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        content: "";
+        background-color: $black;
+    }
+}
+/*-- Opacity --*/
+.overlay-opacity-10 {
+    &::before {
+        opacity: 0.1;
+    }
+}
+.overlay-opacity-15 {
+    &::before {
+        opacity: 0.15;
+    }
+}
+.overlay-opacity-20 {
+    &::before {
+        opacity: 0.2;
+    }
+}
+.overlay-opacity-25 {
+    &::before {
+        opacity: 0.25;
+    }
+}
+.overlay-opacity-30 {
+    &::before {
+        opacity: 0.3;
+    }
+}
+.overlay-opacity-35 {
+    &::before {
+        opacity: 0.35;
+    }
+}
+.overlay-opacity-40 {
+    &::before {
+        opacity: 0.4;
+    }
+}
+.overlay-opacity-45 {
+    &::before {
+        opacity: 0.45;
+    }
+}
+.overlay-opacity-50 {
+    &::before {
+        opacity: 0.5;
+    }
+}
+.overlay-opacity-55 {
+    &::before {
+        opacity: 0.55;
+    }
+}
+.overlay-opacity-60 {
+    &::before {
+        opacity: 0.6;
+    }
+}
+.overlay-opacity-65 {
+    &::before {
+        opacity: 0.65;
+    }
+}
+.overlay-opacity-70 {
+    &::before {
+        opacity: 0.7;
+    }
+}
+.overlay-opacity-75 {
+    &::before {
+        opacity: 0.75;
+    }
+}
+.overlay-opacity-80 {
+    &::before {
+        opacity: 0.8;
+    }
+}
+.overlay-opacity-85 {
+    &::before {
+        opacity: 0.85;
+    }
+}
+.overlay-opacity-90 {
+    &::before {
+        opacity: 0.9;
+    }
+}
+.overlay-opacity-95 {
+    &::before {
+        opacity: 0.95;
+    }
+}
+
+/*-- 
+    Scroll Up 
+-----------------------------------------*/
+#scrollUp {
+    width: 40px;
+    height: 40px;
+    background-color: $blue;
+    color: $white;
+    right: 40px;
+    bottom: 40px;
+    text-align: center;
+    overflow: hidden;
+    @media #{$large-mobile}{
+        display: none !important;
+    }
+    & i {
+        display: block;
+        line-height: 40px;
+        font-size: 24px;
+    }
+    &:hover i {
+        animation-name: fadeInUp;
+        animation-duration:1s;
+        animation-fill-mode:both;
+        animation-iteration-count: infinite;
+    }
+}
+
+/*--
+    Main Wrapper
+-----------------------------------------*/
+#main-wrapper {
+    position: relative;
+}
+
+/*--
+    Youtube Video PlayList
+-----------------------------------------*/
+.RYPP {
+    padding: 18px 18px 350px 18px;
+    @media #{$large-mobile}{
+        padding-bottom: 18px;
+    }
+    & .RYPP-video {
+        & .RYPP-video-player {}
+    }
+    & .RYPP-playlist {
+        bottom: 18px;
+        height: 314px;
+        left: 18px;
+        right: 18px;
+        top: auto;
+        overflow: hidden;
+        width: auto;
+        @media #{$large-mobile}{
+            margin-top: 18px;
+            position: relative;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+        }
+        & .RYPP-items {
+            top: 0;
+            & ol {
+                display: flex;
+                flex-wrap: wrap;
+                float: left;
+                padding: 0;
+                width: 100%;
+                & li {
+                    width: 50%;
+                    float: left;
+                    border-right: 1px solid $black;
+                    border-bottom: 1px solid $black;
+                    @media #{$large-mobile}{
+                        width: 100%;
+                    }
+                    &:nth-child(2n+1) {
+                        clear: both;
+                    }
+                    &:nth-child(2n) {
+                        border-right-color: transparent;
+                    }
+                    &::before {
+                        font-size: 100%;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+        & .nicescroll-rails-vr {
+            left: auto !important;
+            width: 3px !important;
+            right: 0;
+            & .nicescroll-cursors {
+                border-color: transparent!important;
+                background-color: $red !important;
+            }
+        }
+    }
+}
+
+/*--
+    Instagram Carousel
+-----------------------------------------*/
+.instagram-carousel {
+    
+    /*-- Instagram --*/
+    & .instagram-item {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: "\f16d";
+            font-family: 'Fontawesome';
+            position: absolute;
+            color: $white;
+            left: 10px;
+            top: 10px;
+            font-size: 24px;
+            line-height: 24px;
+            display: block;
+            z-index: 3;
+        }
+        &::after {
+            background-color: $black;
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+            opacity: 0;
+        }
+        & img {
+            width: 100%;
+        }
+        
+        &:hover {
+            &::after {
+                opacity: 0.3;
+            }
+            & img {
+                transform: scale(1.2) rotate(5deg);
+            }
+        }
+    }
+}
+
+/*--
+    Page Banner
+-----------------------------------------*/
+.page-banner-section {}
+
+/*-- Page Banner --*/
+.page-banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    padding: 64px 30px;
+    overflow: hidden;
+    @media #{$desktop-device}{
+        padding: 37px 30px;
+    }
+    @media #{$tablet-device}{
+        padding: 30px;
+    }
+    @media #{$large-mobile}{
+        padding: 30px;
+    }
+    & h2 {
+        color: $white;
+        font-weight: 700;
+        text-transform: capitalize;
+        margin-bottom: 15px;
+        @media #{$large-mobile}{
+            font-size: 24px;
+        }
+        & span {
+            
+            // Category Color ----------
+            &.category-travel {
+                color: $travel;
+            }
+            &.category-life-style {
+                color: $life-style;
+            }
+            &.category-fashion {
+                color: $fashion;
+            }
+            &.category-sports {
+                color: $sports;
+            }
+            &.category-gadgets {
+                color: $gadgets;
+            }
+            &.category-feature {
+                color: $feature;
+            }
+            &.category-politic {
+                color: $politic;
+            }
+            &.category-education {
+                color: $education;
+            }
+            &.category-health {
+                color: $health;
+            }
+            &.category-madical {
+                color: $madical;
+            }
+            &.category-video {
+                color: $video;
+            }
+            &.category-businsee {
+                color: $businsee;
+            }
+        }
+    }
+    /*-- Page Breadcrumb --*/
+    .page-breadcrumb {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        float: left;
+        margin-bottom: 11px;
+        & li {
+            color: #cccccc;
+            display: block;
+            float: left;
+            text-transform: capitalize;
+            &::after {
+                content: "/";
+                margin: 0 5px;
+            }
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+            & a {
+                color: #cccccc;
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
+    & p {
+        color: #cccccc;
+    }
+}
+/*-- Page Banner Right Image --*/
+.page-banner-image {
+    & img {
+        width: 100%;
+    }
+}
+
+/*--
+    Page Pagination
+-----------------------------------------*/
+.page-pagination {
+    & ul {
+        & li {
+            display: inline-block;
+            & a {
+                display: block;
+                width: 30px;
+                height: 30px;
+                border: 1px solid #dddddd;
+                line-height: 30px;
+                text-align: center;
+                color: $body-color;
+                & i {
+                    display: block;
+                    line-height: 29px;
+                    font-size: 16px;
+                }
+                &:hover {
+                    color: $blue;
+                    border-color: $blue;
+                }
+            }
+        }
+    }
+}
+.page-pagination-2 {
+    & ul {
+        & li {
+            display: inline-block;
+            & a {
+                display: block;
+                width: 30px;
+                height: 30px;
+                border: 1px solid #dddddd;
+                line-height: 30px;
+                text-align: center;
+                color: $body-color;
+                font-weight: 600;
+                border-radius: 50%;
+                & i {
+                    display: block;
+                    line-height: 29px;
+                    font-size: 16px;
+                }
+                &:hover {
+                    color: $blue;
+                    border-color: $blue;
+                }
+            }
+            &.active {
+                & a {
+                    background-color: $blue;
+                    border-color: $blue;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+/*--
+    Blockquote
+-----------------------------------------*/
+blockquote.blockquote {
+    text-align: center;
+    background-color: $blue;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    float: left;
+    padding: 35px 90px;
+    &::before {
+        font-family: 'Fontawesome';
+        content: "\f10d";
+        position: absolute;
+        left: -2px;
+        top: 3px;
+        font-size: 60px;
+        color: $white;
+    }
+    &  p {
+        color: $white;
+        font-size: 16px;
+        line-height: 29px;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+    }
+    &.blockquote-bg {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-color: transparent;
+        &::before {
+            color: $blue;
+        }
+        &  p {
+            color: #a7bdd6;
+        }
+    }
+}

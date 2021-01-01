@@ -1,0 +1,311 @@
+/*----------------------------------------*/
+/*  9.  Footer
+/*----------------------------------------*/
+
+/*--
+    Footer Top
+----------------------------------------*/
+.footer-top-section {
+    padding: 100px 105px 40px;
+    @media #{$laptop-device}{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @media #{$desktop-device}{
+        padding: 100px 65px 40px;
+    }
+    @media #{$tablet-device}{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    @media #{$large-mobile}{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+/*-- Footer Widget --*/
+.footer-widget {
+    padding: 0 35px;
+    @media #{$laptop-device}{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @media #{$small-mobile}{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    /*-- Title --*/
+    & .widget-title {
+        font-family: $open-sans;
+        font-weight: 600;
+        color: $white;
+        line-height: 14px;
+        text-transform: capitalize;
+        padding-left: 15px;
+        border-left: 4px solid $blue;
+        margin-bottom: 30px;
+    }
+    
+    /*-- Content --*/
+    & .content {
+        
+        & p {
+            font-size: 13px;
+            color: #cccccc;
+        }
+        
+        /*-- Footer Contact --*/
+        & .footer-contact {
+            padding-left: 0;
+            float: left;
+            margin-top: 8px;
+            width: 100%;
+            margin-bottom: 25px;
+            & li {
+                margin-bottom: 10px;
+                color: #cccccc;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                & i {
+                    width: 20px;
+                    text-align: left;
+                    margin-right: 10px;
+                    font-size: 16px;
+                }
+            }
+        }
+        
+        /*-- Footer Social --*/
+        & .footer-social {
+            & a {
+                width: 36px;
+                height: 36px;
+                border-radius: 3px;
+                text-align: center;
+                color: $white;
+                text-shadow: 0 2px 2px rgba($black, 0.4);
+                & i {
+                    font-size: 16px;
+                    line-height: 38px;
+                }
+                
+                &.facebook {
+                    background-color: #516eab;
+                }
+                &.twitter {
+                    background-color: #40bff5;
+                }
+                &.dribbble {
+                    background-color: #f7659c;
+                }
+                &.google-plus {
+                    background-color: #eb5e4c;
+                }
+                
+            }
+        }
+    }
+
+    /*-- Footer Widget Post --*/
+    & .footer-widget-post {
+        overflow: hidden;
+        border-bottom: 1px solid #282828;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        /*-- Post Wrap --*/
+        & .post-wrap {
+            overflow: hidden;
+            /*-- Image --*/
+            & .image {
+                width: 104px;
+                margin-right: 20px;
+                float: left;
+                @media #{$small-mobile}{
+                    width: 90px;
+                    margin-right: 15px;
+                }
+                & img {
+                    width: 100%;
+                }
+            }
+            /*-- Content --*/
+            & .content {
+                overflow: hidden;
+                & .title {
+                    & a {
+                        color: #cccccc;
+                        font-weight: 600;
+                        &:hover {
+                            color: $blue;
+                        }
+                    }
+                }
+                & .meta {
+
+                    /*-- Meta List --*/
+                    & .meta-item {
+                        color: #cccccc;
+                        margin-top: 5px;
+                        font-size: 13px;
+                        font-family: $open-sans;
+                        line-height: 16px;
+                        display: block;
+                        float: left;
+                        margin-right: 15px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+                        /*-- Icon --*/
+                        & i {
+                            display: block;
+                            float: left;
+                            margin-right: 6px;
+                            font-size: 13px;
+                            line-height: 16px;
+                            padding-left: 1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    /*-- Footer Tweet --*/
+    & .single-tweet {
+        border-bottom: 1px solid #282828;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        position: relative;
+        &:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+        &::before {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            content: "\f099";
+            font-family: 'Fontawesome';
+            color: $blue;
+            opacity: 0.1;
+            font-size: 70px;
+            line-height: 50px;
+        }
+        /*-- Image --*/
+        & .image {
+            width: 40px;
+            margin-right: 10px;
+            float: left;
+            & img {
+                width: 100%;
+            }
+        }
+        /*-- Content --*/
+        & .content {
+            /*-- Head --*/
+            & .head {
+                overflow: hidden;
+                & h5 {
+                    float: left;
+                    font-family: $open-sans;
+                    font-weight: 600;
+                    border-right: 1px solid #3b3b3b;
+                    margin-right: 15px;
+                    padding-right: 15px;
+                    line-height: 14px;
+                    & a {
+                        color: #cccccc;
+                        &:hover {
+                            color: $blue;
+                        }
+                    }
+                }
+                & span {
+                    display: block;
+                    line-height: 14px;
+                    color: #cccccc;
+                }
+            }
+            /*-- Tags --*/
+            & .tags {
+                & a {
+                    font-size: 13px;
+                    line-height: 20px;
+                    color: #cccccc;
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+            }
+            /*-- LInks --*/
+            & .links {
+                & a {
+                    font-size: 13px;
+                    line-height: 20px;
+                    color: $blue;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            /*-- Meta --*/
+            & .meta {
+                margin-top: 10px;
+                & li {
+                    border-right: 1px solid #3b3b3b;
+                    margin-right: 20px;
+                    padding-right: 20px;
+                    float: left;
+                    display: block;
+                    line-height: 12px;
+                    margin-top: 7px;
+                    &:last-child {
+                        margin-right: 0;
+                        padding-right: 0;
+                        border-right: none;
+                    }
+                    & a {
+                        font-size: 13px;
+                        color: #cccccc;
+                        line-height: 12px;
+                        &:hover {
+                            color: $blue;
+                        }
+                        & i {
+                            font-size: 14px;
+                            float: left;
+                            line-height: 12px;
+                            margin-right: 10px;
+                            padding-left: 1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*--
+    Footer Bottom
+----------------------------------------*/
+.footer-bottom-section {
+    border-top: 1px solid #343434;
+    padding: 15px 0;
+    /*-- Copyright --*/
+    & .copyright {
+        line-height: 30px;
+        font-size: 13px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #cccccc;
+    }
+}

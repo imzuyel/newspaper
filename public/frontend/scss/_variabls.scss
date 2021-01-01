@@ -1,0 +1,47 @@
+// Font Family
+$open-sans: 'Open Sans', sans-serif;
+$poppins: 'Poppins', sans-serif;
+
+// Colors
+
+// Theme Color
+$blue: #00c8fa;
+$yellow: #ffc61c;
+$red: #f05555;
+
+$body-color: #666666;
+$heading-color: #444444;
+$heading-color-light: #666666;
+
+$white: #ffffff;
+$black: #000000;
+
+// Background Color
+$bg-white: $white;
+$bg-black: $black;
+$bg-light-gray: #f6f6f6;
+$bg-dark-gray: #2d2d2d;
+$bg-dark: #1f2024;
+
+// Category Color
+$travel: #ffc61c;
+$life-style: #ffc61c;
+$fashion: #ff58c8;
+$sports: #67bf35;
+$gadgets: #1f2024;
+$feature: #00c8fa;
+$politic: #f05555;
+$education: #008bff;
+$health: #008bff;
+$madical: #008bff;
+$video: #ec0000;
+$businsee: #26d572;
+
+
+// Responsive Variables
+$laptop-device : 'only screen and (min-width: 1200px) and (max-width: 1600px)';
+$desktop-device : 'only screen and (min-width: 992px) and (max-width: 1200px)';
+$tablet-device:'only screen and (min-width: 768px) and (max-width: 991px)';
+$large-mobile:'only screen and (max-width: 767px)';
+$small-mobile: 'only screen and (max-width: 479px)';
+

@@ -1,0 +1,77 @@
+/*----------------------------------------*/
+/*  8.  Contact
+/*----------------------------------------*/
+
+.contact-info, .contact-form {
+    padding: 30px 10px;
+}
+
+/*-- Single Contact --*/
+.single-contact {
+    @media #{$large-mobile}{
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    & i {
+        font-size: 36px;
+        color: $blue;
+        margin-bottom: 10px;
+    }
+    & p {}
+}
+
+/*-- Contact Form --*/
+.contact-form {
+    & label {
+        display: block;
+        line-height: 18px;
+        & sup {
+            color: $blue;
+        }
+    }
+    & input {
+        width: 100%;
+        height: 40px;
+        border: 1px solid #f1f1f1;
+        line-height: 24px;
+        padding: 7px 15px;
+        &[type="submit"] {
+            width: auto;
+            border-radius: 5px;
+            background-color: $blue;
+            color: $white;
+            text-transform: capitalize;
+            border: none;
+            padding: 8px 30px;
+            &:focus {
+                border: none;
+            }
+        }
+        &:focus {
+            border-color: $blue;
+        }
+    }
+    & textarea {
+        width: 100%;
+        height: 100px;
+        resize: none;
+        border: 1px solid #f1f1f1;
+        line-height: 24px;
+        padding: 7px 15px;
+        &:focus {
+            border-color: $blue;
+        }
+    }
+}
+
+/*-- Contact Map Wrap --*/
+.contact-map-wrap {
+    padding: 10px;
+}
+/*-- Contact Map --*/
+#contact-map {
+    height: 350px;
+    width: 100%;
+}

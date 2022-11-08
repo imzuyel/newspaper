@@ -1,7 +1,7 @@
 # Laravel Newspaper website
 
 ## Live preview
-[`click`](https://codeman.imzuyel.com/)
+[`click`](https://newspaper.imzuyel.com/)
 
 ## Frontend
 ![আমার-সংবাদ](https://user-images.githubusercontent.com/43112820/167244220-2aa27a97-b635-4948-89ec-77042a06afdb.png)
